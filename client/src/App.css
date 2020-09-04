@@ -10,4 +10,5 @@ html {
 
 .navbar-container {
   background-color: rgb(20, 40, 92);
+  height: 110px;
 }
