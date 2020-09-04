@@ -72,6 +72,29 @@ function Navbar() {
             <li>Climate News</li>
             <li>Award-Winning Investigations</li>
           </ul>
+          <ul className="listing-container">
+            {" "}
+            HEALTH & ACTIVITIES
+            <li>Allergy Tracker</li>
+            <li>Cold & Flu</li>
+            <li>Water Security</li>
+            <li>Boat & Beach Forecast</li>
+            <li>Gardening Forecast</li>
+            <li>Ski Forecast</li>
+          </ul>
+          <ul className="listing-container">
+            {" "}
+            TV
+            <li>Personalities</li>
+            <li>Watch Live</li>
+          </ul>
+          <ul className="listing-container">
+            {" "}
+            Privacy
+            <li>Privacy Settings</li>
+            <li>Data Rights</li>
+            <li>Privacy Policy</li>
+          </ul>
         </div>
       ) : null}
     </>

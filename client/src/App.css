@@ -85,6 +85,45 @@ img {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
+  transition: 0.5s;
+}
+
+.cloud-degree {
+  font-size: 2rem;
+  color: rgb(224, 218, 218);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.cloud-degree i {
+  font-size: 5rem;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-weather {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-left: 50px;
+
+  background-color: hsla(0, 0%, 100%, 0.2);
+  border-radius: 12px;
+  padding: 10px;
+  padding-left: 40px;
+  width: 50%;
+  color: white;
+}
+
+.city-weather h1 {
+  font-size: 5em;
+  margin: 1px;
 }
 
 .navbar-children {
