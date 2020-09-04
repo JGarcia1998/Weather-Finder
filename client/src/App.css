@@ -8,6 +8,10 @@ html {
   height: 100%;
 }
 
+* {
+  font-family: "Oswald", sans-serif;
+}
+
 img {
   width: 100px;
   height: 100px;
@@ -36,6 +40,26 @@ img {
   background-color: rgb(20, 40, 92);
   height: 110px;
   display: flex;
+}
+
+.navbar-opening ul {
+  font-weight: bold;
+  margin-right: 120px;
+  color: rgb(61, 60, 60);
+}
+
+.navbar-opening ul li {
+  font-weight: lighter;
+  list-style-type: none;
+  margin-top: 10px;
+  color: rgb(73, 72, 72);
+}
+
+.navbar-opening {
+  background-color: rgb(250, 246, 246);
+  height: 100%;
+  display: flex;
+  padding: 10px;
 }
 
 .navbar-children {
