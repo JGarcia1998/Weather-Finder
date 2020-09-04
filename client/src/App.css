@@ -15,6 +15,23 @@ img {
   margin-left: 15px;
 }
 
+.bars-icon {
+  position: absolute;
+  right: 0;
+  align-self: center;
+  margin-right: 20px;
+}
+
+.bars-icon button {
+  background: none;
+  outline: none;
+}
+
+.bars-icon button i {
+  color: white;
+  font-size: xx-large;
+}
+
 .navbar-container {
   background-color: rgb(20, 40, 92);
   height: 110px;
