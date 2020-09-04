@@ -3,10 +3,10 @@ import React from "react";
 function Navbar() {
   return (
     <div className="navbar-container">
-      <div>
-        <input type="text" placeholder="Search City or Zip Code"></input>
+      <div className="navbar-children">
+        <input type="text" placeholder="Search City or Zip Code" />
         <button>
-          <i class="fas fa-search"></i>
+          <i class="fa fa-search" aria-hidden="true"></i>
         </button>
       </div>
     </div>
