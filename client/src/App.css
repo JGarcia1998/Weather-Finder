@@ -44,8 +44,27 @@ img {
 
 .navbar-opening ul {
   font-weight: bold;
-  margin-right: 120px;
+  margin-right: 100px;
   color: rgb(61, 60, 60);
+}
+
+.globe-container {
+  position: absolute;
+  right: 10%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+
+.globe-container i {
+  color: white;
+  font-size: x-large;
+  margin: 10px;
+}
+
+.globe-container p {
+  color: white;
+  letter-spacing: 1px;
 }
 
 .navbar-opening ul li {
@@ -64,6 +83,7 @@ img {
   background-color: rgb(250, 246, 246);
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   padding: 10px;
 }
 

@@ -18,13 +18,17 @@ function Navbar() {
   return (
     <>
       <div className="navbar-container">
-        <img src="logo192.png"></img>
+        <img src="logo192.png" />
 
         <div className="navbar-children">
           <input type="text" placeholder="Search City or Zip Code" />
           <button>
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
+        </div>
+        <div className="globe-container">
+          <i class="fa fa-globe" aria-hidden="true"></i>
+          <p>US | &#176;F</p>
         </div>
         <div className="bars-icon">
           <button onClick={changeClass}>
