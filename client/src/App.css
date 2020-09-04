@@ -7,3 +7,7 @@ html {
   background-repeat: no-repeat;
   height: 100%;
 }
+
+.navbar-container {
+  background-color: rgb(20, 40, 92);
+}
