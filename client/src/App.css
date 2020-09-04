@@ -1,4 +1,4 @@
-html {
+body {
   background-image: linear-gradient(
     180deg,
     rgb(26, 53, 124),
@@ -114,7 +114,7 @@ img {
   margin-left: 50px;
 
   background-color: hsla(0, 0%, 100%, 0.2);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 10px;
   padding-left: 40px;
   width: 50%;
@@ -162,4 +162,57 @@ button {
   border-radius: 24px;
   border: none;
   cursor: pointer;
+}
+
+.todays-forecast {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  margin-top: 10px;
+  margin-left: 50px;
+
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 40px;
+  width: 50%;
+  color: black;
+}
+
+.forecast-container {
+  display: flex;
+
+  justify-content: space-between;
+  color: rgb(92, 92, 92);
+  font-size: x-large;
+}
+
+.degrees {
+  color: blue;
+}
+
+.vl {
+  border-left: 2px solid grey;
+  height: 160px;
+
+  border-top: 0;
+  border-bottom: 0;
+  border-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(206, 202, 202) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+}
+
+.forecast-container ul {
+  margin-right: 20px;
+}
+
+.forecast-container li {
+  list-style-type: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }

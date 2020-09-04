@@ -17,6 +17,38 @@ function Body() {
           --/76&#176;
         </div>
       </div>
+      <div className="todays-forecast">
+        <h2>Today's Forecast for Houston, TX</h2>
+        <div className="forecast-container">
+          <ul>
+            <li>Morning</li>
+            <li className="degrees">86&#176;</li>
+            <i class="fa fa-cloud" aria-hidden="true"></i>
+            <p>--</p>
+          </ul>
+          <div className="vl"></div>
+          <ul>
+            <li>Afternoon</li>
+            <li className="degrees">95&#176;</li>
+            <i class="fa fa-cloud" aria-hidden="true"></i>
+            <p>--</p>
+          </ul>
+          <div className="vl"></div>
+          <ul>
+            <li>Evening</li>
+            <li className="degrees">83&#176;</li>
+            <i class="fa fa-cloud" aria-hidden="true"></i>
+            <p>--</p>
+          </ul>
+          <div className="vl"></div>
+          <ul>
+            <li>Overnight</li>
+            <li className="degrees">81&#176;</li>
+            <i class="fa fa-cloud" aria-hidden="true"></i>
+            <p>--</p>
+          </ul>
+        </div>
+      </div>
     </>
   );
 }
