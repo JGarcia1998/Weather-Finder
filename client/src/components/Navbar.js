@@ -22,7 +22,7 @@ function Navbar() {
 
         <div className="navbar-children">
           <input type="text" placeholder="Search City or Zip Code" />
-          <button>
+          <button className="navbar-btn">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </div>
@@ -31,7 +31,7 @@ function Navbar() {
           <p>US | &#176;F</p>
         </div>
         <div className="bars-icon">
-          <button onClick={changeClass}>
+          <button className="navbar-btn" onClick={changeClass}>
             <i class={Class} aria-hidden="true"></i>
           </button>
         </div>
