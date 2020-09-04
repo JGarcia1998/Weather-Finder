@@ -8,12 +8,24 @@ html {
   height: 100%;
 }
 
+img {
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  margin-left: 15px;
+}
+
 .navbar-container {
   background-color: rgb(20, 40, 92);
   height: 110px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.navbar-children {
+  align-self: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 input::placeholder {
