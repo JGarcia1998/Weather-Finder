@@ -1,9 +1,14 @@
 import React from "react";
+import Navbar from "./components/Navbar";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  return <h1>Weather</h1>;
+  return (
+    <>
+      <Navbar></Navbar>
+    </>
+  );
 }
 
 export default App;
