@@ -261,12 +261,15 @@ input:focus {
   position: relative;
   background-color: white;
   border-radius: 10px;
-  padding: 10px;
-  padding-left: 40px;
-  width: 50%;
+
+  width: 54%;
   height: 100%;
   color: black;
   margin-bottom: 5px;
+}
+
+.radar-map-container h1 {
+  margin-left: 15px;
 }
 
 .google-map {
