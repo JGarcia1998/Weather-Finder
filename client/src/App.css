@@ -278,3 +278,62 @@ input:focus {
 .next-hours:hover {
   box-shadow: 0 0 5px rgb(105, 105, 105);
 }
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  margin-top: 10px;
+  margin-left: 50px;
+
+  background-color: white;
+  border-radius: 10px;
+
+  width: 60%;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.weather-details h2 {
+  margin-left: 20px;
+}
+.inline-span p {
+  margin-top: -30px;
+  margin-left: 25px;
+}
+
+.inline-span h1 {
+  margin-top: -10px;
+  font-size: 3rem;
+  margin-left: 30px;
+}
+#hr {
+  width: 99%;
+}
+hr {
+  width: 350px;
+  border-color: rgb(241, 241, 241);
+}
+
+.column-container p {
+  margin-left: 20px;
+}
+
+.inline-block-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons-details {
+  margin-right: 8px;
+}
+
+.p-tag-details {
+  margin-right: 10px;
+}
+
+.w-details-container {
+  display: flex;
+  justify-content: space-between;
+}
