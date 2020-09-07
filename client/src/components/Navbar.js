@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Navbar() {
   const [Class, setClass] = useState("fa fa-bars");
@@ -14,6 +14,14 @@ function Navbar() {
       setShowMenu(false);
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      alert(
+        "This is a front end representation ONLY, all information is FALSE"
+      );
+    }, 2000);
+  }, []);
 
   return (
     <>

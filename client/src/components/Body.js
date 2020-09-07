@@ -11,6 +11,24 @@ function Body(props) {
     lat: 30.62237,
     lng: -96.325851,
   };
+
+  fetch(
+    "https://community-open-weather-map.p.rapidapi.com/find?type=link%252C%20accurate&units=imperial%252C%20metric&q=houston",
+    {
+      method: "GET",
+      headers: {
+        "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
+        "x-rapidapi-key": "a33dbf3860mshed978d16591075cp11af79jsnb0093867fdd3",
+      },
+    }
+  )
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   return (
     <>
       <img className="adv" src="image1.png" />
