@@ -9,7 +9,7 @@ body {
 }
 
 * {
-  font-family: "Oswald", sans-serif;
+  font-family: 14px Lato;
 }
 
 img {
@@ -337,3 +337,4 @@ hr {
   display: flex;
   justify-content: space-between;
 }
+
