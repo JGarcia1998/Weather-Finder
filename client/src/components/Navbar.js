@@ -15,13 +15,13 @@ function Navbar() {
     }
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      alert(
-        "This is a front end representation ONLY, all information is FALSE"
-      );
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     alert(
+  //       "This is a front end representation ONLY, all information is FALSE"
+  //     );
+  //   }, 2000);
+  // }, []);
 
   return (
     <>

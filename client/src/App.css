@@ -107,17 +107,75 @@ img {
   flex-direction: column;
 }
 
+.grid-block-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ".city-weather ads."
+    ".todays-forecast ads.";
+  grid-gap: 5px;
+}
+
+.advertisements {
+  background-color: white;
+  color: black;
+  width: 200px;
+  grid-area: ads;
+  margin-top: 20px;
+  border-radius: 10px;
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.advertisements p {
+  text-align: right;
+  font-size: x-small;
+  padding-right: 3px;
+  color: rgb(138, 136, 136);
+}
+
+.advertisements img {
+  height: 40%;
+  margin: 0 auto;
+  display: block;
+
+  width: 95%;
+}
+
+.advertisements button {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(50, 50, 226);
+  color: white;
+  border-radius: 24px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s;
+  outline: none;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.advertisements button:hover {
+  box-shadow: 0 0 5px rgb(105, 105, 105);
+}
+
 .city-weather {
+  grid-area: city-weather;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin-left: 50px;
+
+  justify-self: start;
 
   background-color: hsla(0, 0%, 100%, 0.2);
   border-radius: 10px;
   padding: 10px;
   padding-left: 40px;
-  width: 50%;
+  width: 90%;
   color: white;
 }
 
@@ -165,18 +223,19 @@ input:focus {
 }
 
 .todays-forecast {
+  grid-area: todays-forecast;
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-self: start;
 
   margin-top: 10px;
-  margin-left: 50px;
 
   background-color: white;
   border-radius: 10px;
   padding: 10px;
   padding-left: 40px;
-  width: 50%;
+  width: 90%;
   color: black;
   margin-bottom: 5px;
 }
@@ -239,17 +298,9 @@ input:focus {
   left: 50%;
   transform: translate(-50%);
   margin-top: 25px;
-  width: 70%;
+  width: 75%;
   height: 200px;
 }
-
-/* <iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA-J9LED413ZnX7iK2fEoxwGcjDFD-V3l4
-    &q=Space+Needle,Seattle+WA" allowfullscreen>
-</iframe> */
 
 .radar-map-container {
   display: flex;
@@ -341,3 +392,41 @@ hr {
 .inner-vd {
   background: none;
 }
+
+/* .box1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". box1 longchild ."
+    ". box2 longchild ."
+    ". box3 longchild .";
+  grid-gap: 5px;
+}
+
+.child1 {
+  background-color: red;
+  width: 100%;
+
+  grid-area: box1;
+}
+
+.child2 {
+  background-color: red;
+  width: 100%;
+
+  grid-area: box2;
+}
+
+.child3 {
+  background-color: red;
+  width: 100%;
+
+  grid-area: box3;
+}
+
+.longchild {
+  width: 25%;
+  background-color: blue;
+  grid-area: longchild;
+} */
