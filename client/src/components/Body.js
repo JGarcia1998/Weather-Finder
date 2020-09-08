@@ -77,7 +77,7 @@ function Body(props) {
             <GoogleMap
               className="google-map"
               mapContainerStyle={mapStyles}
-              zoom={10}
+              zoom={5}
               center={defaultCenter}
             />
           </LoadScript>
@@ -88,8 +88,9 @@ function Body(props) {
           <span className="inline-span">
             <h1>92&#176;</h1>
             <p>Feels Like</p>
+            <hr id="hr"></hr>
           </span>
-          <hr id="hr"></hr>
+
           <span className="w-details-container">
             <div className="column-container">
               <span className="inline-block-detail">
@@ -129,6 +130,7 @@ function Body(props) {
                 </p>
                 <p>10 mi</p>
               </span>
+              <hr></hr>
             </div>
             <div className="column-container">
               <span className="inline-block-detail">
@@ -162,6 +164,7 @@ function Body(props) {
                 </p>
                 <p className="p-tag-details">Waning Gibous</p>
               </span>
+              <hr></hr>
             </div>
           </span>
         </div>

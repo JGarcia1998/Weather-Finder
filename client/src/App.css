@@ -230,6 +230,7 @@ input:focus {
   text-align: center;
   justify-self: start;
   margin-top: 20px;
+  height: 400px;
 
   background-color: white;
   border-radius: 10px;
@@ -306,12 +307,12 @@ input:focus {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-top: 17px;
-  position: relative;
+
   background-color: white;
   border-radius: 10px;
 
   width: 94%;
+  margin-top: 15px;
 
   color: black;
   padding: 10px;
@@ -331,6 +332,8 @@ input:focus {
   display: flex;
   flex-direction: column;
   text-align: left;
+  position: relative;
+
   grid-area: weather-details;
 
   margin-top: 20px;
@@ -341,7 +344,6 @@ input:focus {
 
   width: 94%;
   color: black;
-  margin-bottom: 5px;
 }
 
 .weather-details h2 {
@@ -357,12 +359,22 @@ input:focus {
   font-size: 3rem;
   margin-left: 30px;
 }
-#hr {
-  width: 99%;
+.w-details-container {
+  display: flex;
+  justify-content: space-between;
 }
+
 hr {
-  width: 350px;
+  width: 42%;
+  text-align: right;
+  margin: auto;
   border-color: rgb(241, 241, 241);
+  position: absolute;
+}
+
+#hr {
+  position: absolute;
+  width: 95%;
 }
 
 .column-container p {
@@ -382,49 +394,6 @@ hr {
   margin-right: 10px;
 }
 
-.w-details-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .inner-vd {
   background: none;
 }
-
-/* .box1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    ". box1 longchild ."
-    ". box2 longchild ."
-    ". box3 longchild .";
-  grid-gap: 5px;
-}
-
-.child1 {
-  background-color: red;
-  width: 100%;
-
-  grid-area: box1;
-}
-
-.child2 {
-  background-color: red;
-  width: 100%;
-
-  grid-area: box2;
-}
-
-.child3 {
-  background-color: red;
-  width: 100%;
-
-  grid-area: box3;
-}
-
-.longchild {
-  width: 25%;
-  background-color: blue;
-  grid-area: longchild;
-} */
