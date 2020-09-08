@@ -70,99 +70,102 @@ function Body(props) {
           <img src="ad2.png" />
           <button>See Details</button>
         </div>
+
+        <div className="radar-map-container">
+          <h1>Radar</h1>
+          <LoadScript googleMapsApiKey="AIzaSyC4sXFApb5UYtwwfG-FGcrqUAzWGJJEdAk">
+            <GoogleMap
+              className="google-map"
+              mapContainerStyle={mapStyles}
+              zoom={10}
+              center={defaultCenter}
+            />
+          </LoadScript>
+        </div>
+
+        <div className="weather-details">
+          <h2>Weather Today in Houston, TX</h2>
+          <span className="inline-span">
+            <h1>92&#176;</h1>
+            <p>Feels Like</p>
+          </span>
+          <hr id="hr"></hr>
+          <span className="w-details-container">
+            <div className="column-container">
+              <span className="inline-block-detail">
+                <p>
+                  <i
+                    class="fa fa-thermometer-empty icons-details"
+                    aria-hidden="true"
+                  ></i>
+                  High / Low
+                </p>
+                <p>--78&#176;</p>
+              </span>
+              <hr></hr>
+              <span className="inline-block-detail">
+                <p>
+                  <i class="fa fa-tint icons-details" aria-hidden="true"></i>
+                  Humidity
+                </p>
+                <p>80%</p>
+              </span>
+              <hr></hr>
+              <span className="inline-block-detail">
+                <p>
+                  <i
+                    class="fa fa-arrow-down icons-details"
+                    aria-hidden="true"
+                  ></i>
+                  Pressure
+                </p>
+                <p>29.96 in</p>
+              </span>
+              <hr></hr>
+              <span className="inline-block-detail">
+                <p>
+                  <i class="fa fa-eye icons-details" aria-hidden="true"></i>
+                  Visibility
+                </p>
+                <p>10 mi</p>
+              </span>
+            </div>
+            <div className="column-container">
+              <span className="inline-block-detail">
+                <p>
+                  <i class="fa fa-plane icons-details" aria-hidden="true"></i>
+                  Wind
+                </p>
+                <p className="p-tag-details">26 mph</p>
+              </span>
+              <hr></hr>
+              <span className="inline-block-detail">
+                <p>
+                  <i class="fa fa-tint icons-details" aria-hidden="true"></i>Dew
+                  Point
+                </p>
+                <p className="p-tag-details">76&#176;</p>
+              </span>
+              <hr></hr>
+              <span className="inline-block-detail">
+                <p>
+                  <i class="fa fa-sun-o icons-details" aria-hidden="true"></i>UV
+                  Index
+                </p>
+                <p className="p-tag-details">0 of 10</p>
+              </span>
+              <hr></hr>
+              <span className="inline-block-detail">
+                <p>
+                  <i class="fa fa-moon-o icons-details" aria-hidden="true"></i>
+                  Moon Phase
+                </p>
+                <p className="p-tag-details">Waning Gibous</p>
+              </span>
+            </div>
+          </span>
+        </div>
       </div>
-      {/* <div className="radar-map-container">
-        <h1>Radar</h1>
-        <LoadScript googleMapsApiKey="AIzaSyC4sXFApb5UYtwwfG-FGcrqUAzWGJJEdAk">
-          <GoogleMap
-            className="google-map"
-            mapContainerStyle={mapStyles}
-            zoom={10}
-            center={defaultCenter}
-          />
-        </LoadScript>
-      </div>
-      <div className="weather-details">
-        <h2>Weather Today in Houston, TX</h2>
-        <span className="inline-span">
-          <h1>92&#176;</h1>
-          <p>Feels Like</p>
-        </span>
-        <hr id="hr"></hr>
-        <span className="w-details-container">
-          <div className="column-container">
-            <span className="inline-block-detail">
-              <p>
-                <i
-                  class="fa fa-thermometer-empty icons-details"
-                  aria-hidden="true"
-                ></i>
-                High / Low
-              </p>
-              <p>--78&#176;</p>
-            </span>
-            <hr></hr>
-            <span className="inline-block-detail">
-              <p>
-                <i class="fa fa-tint icons-details" aria-hidden="true"></i>
-                Humidity
-              </p>
-              <p>80%</p>
-            </span>
-            <hr></hr>
-            <span className="inline-block-detail">
-              <p>
-                <i
-                  class="fa fa-arrow-down icons-details"
-                  aria-hidden="true"
-                ></i>
-                Pressure
-              </p>
-              <p>29.96 in</p>
-            </span>
-            <hr></hr>
-            <span className="inline-block-detail">
-              <p>
-                <i class="fa fa-eye icons-details" aria-hidden="true"></i>
-                Visibility
-              </p>
-              <p>10 mi</p>
-            </span>
-          </div>
-          <div className="column-container">
-            <span className="inline-block-detail">
-              <p>
-                <i class="fa fa-plane icons-details" aria-hidden="true"></i>Wind
-              </p>
-              <p className="p-tag-details">26 mph</p>
-            </span>
-            <hr></hr>
-            <span className="inline-block-detail">
-              <p>
-                <i class="fa fa-tint icons-details" aria-hidden="true"></i>Dew
-                Point
-              </p>
-              <p className="p-tag-details">76&#176;</p>
-            </span>
-            <hr></hr>
-            <span className="inline-block-detail">
-              <p>
-                <i class="fa fa-sun-o icons-details" aria-hidden="true"></i>UV
-                Index
-              </p>
-              <p className="p-tag-details">0 of 10</p>
-            </span>
-            <hr></hr>
-            <span className="inline-block-detail">
-              <p>
-                <i class="fa fa-moon-o icons-details" aria-hidden="true"></i>
-                Moon Phase
-              </p>
-              <p className="p-tag-details">Waning Gibous</p>
-            </span>
-          </div>
-        </span>
-      </div>  */}
     </>
   );
 }
