@@ -227,8 +227,9 @@ input:focus {
   grid-area: todays-forecast;
   display: flex;
   flex-direction: column;
+
   text-align: center;
-  justify-self: start;
+
   margin-top: 20px;
 
   background-color: white;
@@ -242,8 +243,8 @@ input:focus {
 
 .forecast-container {
   display: flex;
+  justify-content: flex-end;
 
-  justify-content: space-between;
   color: rgb(92, 92, 92);
   font-size: x-large;
 }
