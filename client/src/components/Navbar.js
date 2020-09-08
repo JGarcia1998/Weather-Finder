@@ -44,6 +44,16 @@ function Navbar() {
           </button>
         </div>
       </div>
+      <div className="navbar-container-b">
+        <span>Today</span>
+        <span>Hourly</span>
+        <span>10 Day</span>
+        <span>Weekend</span>
+        <span>Monthly</span>
+        <span>Radar</span>
+        <span>Video</span>
+        <span>More Forecasts</span>
+      </div>
       {showMenu ? (
         <div className="navbar-opening">
           <ul className="listing-container">

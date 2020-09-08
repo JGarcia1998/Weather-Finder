@@ -6,10 +6,11 @@ body {
   );
   background-repeat: no-repeat;
   height: 100%;
+  font-family: "Oswald", sans-serif;
 }
 
 * {
-  font-family: 14px Lato;
+  font-family: "Oswald", sans-serif;
 }
 
 img {
@@ -37,7 +38,7 @@ img {
 }
 
 .navbar-container {
-  background-color: rgb(20, 40, 92);
+  background-color: rgb(26, 53, 124);
   height: 110px;
   display: flex;
 }
@@ -180,9 +181,13 @@ img {
   color: white;
 }
 
+.city-weather h2 {
+  margin-bottom: 0;
+}
+
 .city-weather h1 {
   font-size: 5em;
-  margin: 1px;
+  margin: 0;
 }
 
 .navbar-children {
@@ -190,6 +195,26 @@ img {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+}
+
+.navbar-container-b {
+  background-color: rgb(16, 32, 74);
+  height: 30px;
+  padding: 20px;
+
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.navbar-container-b span {
+  cursor: pointer;
+}
+
+.navbar-container-b span:hover {
+  border-bottom: 2px solid white;
 }
 
 input::placeholder {
