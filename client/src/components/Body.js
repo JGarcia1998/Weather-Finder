@@ -70,6 +70,17 @@ function Body(props) {
           <img src="ad2.png" />
           <button>See Details</button>
         </div>
+        <div className="second-col-container">
+          <h2>Air Quality Index</h2>
+          <span>58</span>
+
+          <p>Moderate</p>
+          <div>
+            Air quality is acceptable; however, for some pollutants there may be
+            a moderate health concern for a very small number of people who are
+            unusually sensitive to air pollution.
+          </div>
+        </div>
 
         <div className="radar-map-container">
           <h1>Radar</h1>

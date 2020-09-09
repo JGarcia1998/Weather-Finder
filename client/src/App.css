@@ -116,8 +116,8 @@ img {
   grid-template-areas:
     ".city-weather ads."
     ".todays-forecast ads."
-    ".radar . ."
-    ".weather-details. ."
+    ".radar air-index ."
+    ".weather-details . ."
     ". ad6bottom ad6bottom .";
 }
 
@@ -375,7 +375,7 @@ input:focus {
   font-size: medium;
   line-height: 0.2;
   margin-left: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .degree-span {
@@ -479,4 +479,33 @@ input:focus {
 .ad6-bottom-container img {
   width: 90%;
   height: 100px;
+}
+
+.second-col-container {
+  background-color: white;
+
+  width: 250px;
+  grid-area: air-index;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.second-col-container h2 {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.second-col-container p {
+  display: inline-block;
+  font-size: large;
+  margin-left: 10px;
+}
+
+.second-col-container span {
+  margin: 5px 0 0 10px;
+  font-size: xx-large;
+  border: 3px solid rgb(223, 217, 217);
+  border-left-color: rgb(255, 170, 11);
+  padding: 15px;
+  border-radius: 100%;
 }
