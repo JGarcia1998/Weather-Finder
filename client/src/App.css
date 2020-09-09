@@ -401,3 +401,57 @@ input:focus {
 .inline-block-detail span {
   padding: 0 10px;
 }
+
+.footer-container {
+  background-color: white;
+  height: 400px;
+
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-container span {
+  margin: 10px;
+}
+
+.ad5 {
+  width: 200px;
+  height: 75px;
+}
+
+.first-f-container {
+  font-size: small;
+}
+
+.second-f-container span {
+  border-right: 1px solid black;
+  margin: 0;
+  padding: 0 0.5em;
+  font-weight: 600;
+}
+
+.second-f-container span:last-of-type {
+  border: none;
+}
+
+.p-container {
+  font-size: medium;
+}
+
+.third-container span {
+  border-right: 1px solid black;
+  margin: 0;
+  padding: 0 0.5em;
+  font-weight: 600;
+}
+
+.third-container span:last-of-type {
+  border: none;
+}
+
+#copyright-tag {
+  font-size: small;
+}
