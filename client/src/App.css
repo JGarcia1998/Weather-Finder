@@ -117,7 +117,8 @@ img {
     ".city-weather ads."
     ".todays-forecast ads."
     ".radar . ."
-    ".weather-details. .";
+    ".weather-details. ."
+    ". ad6bottom ad6bottom .";
 }
 
 .advertisements {
@@ -171,8 +172,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-
-  justify-self: start;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 
   background-color: hsla(0, 0%, 100%, 0.2);
   border-radius: 10px;
@@ -252,6 +252,7 @@ input:focus {
   grid-area: todays-forecast;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 
   text-align: center;
 
@@ -325,14 +326,14 @@ input:focus {
   transform: translate(-50%);
   margin-top: 25px;
   width: 80%;
-  height: 230px;
+  height: 210px;
 }
 
 .radar-map-container {
   display: flex;
   flex-direction: column;
   text-align: left;
-
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 10px;
 
@@ -355,7 +356,7 @@ input:focus {
 
 .a1-container {
   grid-area: weather-details;
-
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   padding: 10px;
 
@@ -374,6 +375,7 @@ input:focus {
   font-size: medium;
   line-height: 0.2;
   margin-left: 10px;
+  margin-bottom: 50px;
 }
 
 .degree-span {
@@ -385,21 +387,20 @@ input:focus {
 
 .w-details-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.nth-child {
-  text-align: right;
-}
-
 .inline-block-detail {
-  border-top: 1px solid red;
-  padding: 10px 16px;
+  border-top: 1px solid rgb(223, 219, 219);
+  padding: 15px 16px;
 }
 
-.inline-block-detail span {
-  padding: 0 10px;
+.inline-block-detail span:first-of-type {
+  padding: 0 100px 0 10px;
+}
+
+.weather-info {
+  float: right;
 }
 
 .footer-container {
@@ -454,4 +455,28 @@ input:focus {
 
 #copyright-tag {
   font-size: small;
+}
+
+.ad6-bottom-container {
+  grid-area: ad6bottom;
+
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  padding: 0 0 20px 0;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+}
+
+.ad6-bottom-container p {
+  text-align: right;
+  font-size: x-small;
+  color: grey;
+  margin-right: 5px;
+}
+
+.ad6-bottom-container img {
+  width: 90%;
+  height: 100px;
 }

@@ -98,13 +98,13 @@ function Body(props) {
                     aria-hidden="true"
                   ></i>
                   <span>High / Low</span>
-                  <span className="nth-child">--78&#176;</span>
+                  <span className="weather-info">--78&#176;</span>
                 </div>
 
                 <div className="inline-block-detail">
                   <i class="fa fa-tint icons-details" aria-hidden="true"></i>
                   <span>Humidity</span>
-                  <span className="nth-child">80%</span>
+                  <span className="weather-info">80%</span>
                 </div>
 
                 <div className="inline-block-detail">
@@ -113,13 +113,13 @@ function Body(props) {
                     aria-hidden="true"
                   ></i>
                   <span>Pressure</span>
-                  <span className="nth-child">29.96 in</span>
+                  <span className="weather-info">29.96 in</span>
                 </div>
 
                 <div className="inline-block-detail">
                   <i class="fa fa-eye icons-details" aria-hidden="true"></i>
                   <span>Visibility</span>
-                  <span className="nth-child">10 mi</span>
+                  <span className="weather-info">10 mi</span>
                 </div>
               </div>
 
@@ -127,29 +127,33 @@ function Body(props) {
                 <div className="inline-block-detail">
                   <i class="fa fa-plane icons-details" aria-hidden="true"></i>
                   <span>Wind</span>
-                  <span className="nth-child">26 mph</span>
+                  <span className="weather-info">26 mph</span>
                 </div>
 
                 <div className="inline-block-detail">
                   <i class="fa fa-tint icons-details" aria-hidden="true"></i>
                   <span>Dew Point</span>
-                  <span className="nth-child">76&#176;</span>
+                  <span className="weather-info">76&#176;</span>
                 </div>
 
                 <div className="inline-block-detail">
                   <i class="fa fa-sun-o icons-details" aria-hidden="true"></i>
                   <span>UV Index</span>
-                  <span className="nth-child">0 of 10</span>
+                  <span className="weather-info">0 of 10</span>
                 </div>
 
                 <div className="inline-block-detail">
                   <i class="fa fa-moon-o icons-details" aria-hidden="true"></i>
                   <span>Moon</span>
-                  <span className="nth-child">Waning Gibbus</span>
+                  <span className="weather-info">Waning Gibbus</span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="ad6-bottom-container">
+          <p>Advertisement</p>
+          <img src="ad6.png" />
         </div>
       </div>
     </>
