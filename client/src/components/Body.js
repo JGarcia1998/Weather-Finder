@@ -30,7 +30,6 @@ function Body(props) {
             --/76&#176;
           </div>
         </div>
-
         <div className="todays-forecast">
           <h2>Today's Forecast for Houston, TX</h2>
           <div className="forecast-container">
@@ -72,16 +71,21 @@ function Body(props) {
         </div>
         <div className="second-col-container">
           <h2>Air Quality Index</h2>
-          <span>58</span>
+          <div className="mod-container">
+            <span className="index">58</span>
 
-          <p>Moderate</p>
-          <div>
-            Air quality is acceptable; however, for some pollutants there may be
-            a moderate health concern for a very small number of people who are
-            unusually sensitive to air pollution.
+            <div className="para-mod">
+              <span className="mod">Moderate</span>
+              <div>
+                Air quality is acceptable; however, for some pollutants there
+                may be a moderate health concern for a very small number of
+                people who are unusually sensitive to air pollution.
+              </div>
+            </div>
           </div>
+          <button>See Details</button>
         </div>
-
+        ; ;
         <div className="radar-map-container">
           <h1>Radar</h1>
           <LoadScript googleMapsApiKey="AIzaSyC4sXFApb5UYtwwfG-FGcrqUAzWGJJEdAk">
@@ -93,7 +97,6 @@ function Body(props) {
             />
           </LoadScript>
         </div>
-
         <div className="a1-container">
           <h2>Weather Today in Houston, TX</h2>
           <div className="inline-span">
