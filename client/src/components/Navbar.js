@@ -26,7 +26,7 @@ function Navbar() {
   return (
     <>
       <div className="navbar-container">
-        <img src="logo192.png" />
+        <img className="react-logo" src="logo192.png" />
 
         <div className="navbar-children">
           <input type="text" placeholder="Search City or Zip Code" />

@@ -16,9 +16,6 @@ body {
 
 img {
   width: 100px;
-  height: 100px;
-  align-self: center;
-  margin-left: 15px;
 }
 
 .bars-icon {
@@ -42,6 +39,7 @@ img {
   background-color: rgb(26, 53, 124);
   height: 110px;
   display: flex;
+  width: 100%;
 }
 
 .navbar-opening ul {
@@ -92,7 +90,8 @@ img {
 
 .cloud-degree {
   font-size: 2rem;
-  color: rgb(224, 218, 218);
+  color: rgb(255, 255, 255);
+
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -117,7 +116,7 @@ img {
     ".city-weather ads."
     ".todays-forecast ads."
     ".radar air-index ."
-    ".weather-details . ."
+    ".weather-details top-stories ."
     ". ad6bottom ad6bottom .";
 }
 
@@ -317,6 +316,12 @@ input:focus {
   outline: none;
 }
 
+.react-logo {
+  align-self: center;
+  margin-left: 10px;
+  height: 100px;
+  width: 100px;
+}
 .percentages {
   color: black;
 }
@@ -362,8 +367,8 @@ input:focus {
 
   background-color: white;
   border-radius: 10px;
-
   width: 94%;
+
   color: black;
 }
 
@@ -373,7 +378,7 @@ input:focus {
 
 .feels-like {
   font-size: medium;
-  line-height: 0.2;
+  line-height: 0;
   margin-left: 10px;
   margin-bottom: 30px;
 }
@@ -381,7 +386,7 @@ input:focus {
 .degree-span {
   font-size: 3rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 0.5;
   margin-left: 10px;
 }
 
@@ -545,4 +550,84 @@ input:focus {
   margin-bottom: 5px;
 
   color: black;
+}
+
+.row-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.top-stories-container {
+  background-color: white;
+  text-align: center;
+
+  grid-area: top-stories;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.stories-flex p {
+  font-size: small;
+  color: rgb(65, 65, 65);
+}
+
+.stories-flex img {
+  width: 200px;
+  border-radius: 6px;
+}
+
+@media only screen and (max-width: 878px) {
+  .globe-container {
+    display: none;
+  }
+
+  .react-logo {
+    height: 70px;
+    width: 70px;
+  }
+
+  input {
+    width: 150px;
+  }
+
+  input::placeholder {
+    font-size: small;
+  }
+
+  .navbar-opening {
+    flex-direction: column;
+  }
+
+  .navbar-container-b span {
+    font-size: small;
+  }
+
+  .adv {
+    width: 90%;
+    height: 150px;
+  }
+  .grid-block-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "city-weather"
+      "ads"
+      "todays-forecast"
+      "radar"
+      "air-index"
+      "weather-details"
+      "top-stories"
+      "ad6bottom";
+  }
+  .second-col-container {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .a1-container {
+    width: 97%;
+  }
 }

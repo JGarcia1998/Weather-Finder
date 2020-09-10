@@ -83,7 +83,7 @@ function Body(props) {
               </div>
             </div>
           </div>
-          <button>See Details</button>
+          <button>More Details</button>
         </div>
         ; ;
         <div className="radar-map-container">
@@ -99,9 +99,12 @@ function Body(props) {
         </div>
         <div className="a1-container">
           <h2>Weather Today in Houston, TX</h2>
-          <div className="inline-span">
-            <span className="degree-span">92&#176;</span>
-            <p className="feels-like">Feels Like</p>
+          <div className="row-container">
+            <div className="inline-span">
+              <span className="degree-span">92&#176;</span>
+              <p className="feels-like">Feels Like</p>
+            </div>
+            <img src="https://lh3.googleusercontent.com/proxy/acF9zeHbU5qMtdQy5ftSIrcd4lNbzBpYedj_DAVb8860THb6OLSFKibuAhD3bJ5DorlRulY1S_i0d-SzPc76m0TwpETvnARCCN9l" />
           </div>
           <div className="weather-details">
             <div className="w-details-container">
@@ -163,6 +166,15 @@ function Body(props) {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="top-stories-container">
+          <h2>Top Stories</h2>
+          <div className="stories-flex">
+            <img src="https://s.w-x.co/ddayyy.jpg" />
+            <p>Tracking all the active systems</p>
+            <img src="https://cdn.abcotvs.com/dip/images/5791875_122719-kgo-box-truck-ax-img_Image_10-35-58,26.jpg?w=1600" />
+            <p>Dozens of trucks topple on highway</p>
           </div>
         </div>
         <div className="ad6-bottom-container">
