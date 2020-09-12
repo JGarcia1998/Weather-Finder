@@ -55,7 +55,7 @@ function Body(props) {
             <h1>
               {parseInt((info.main?.temp * 9) / 5 + 32) || "Loading..."}&#176;
             </h1>
-            <h2>
+            <h2 className="title-case">
               {(info.weather && info.weather[0].description) || "Loading..."}
             </h2>
             <h3>10% chance of rain through 11pm</h3>
@@ -63,11 +63,11 @@ function Body(props) {
 
           <div className="cloud-degree">
             <i class="fa fa-cloud" aria-hidden="true"></i>
-            --/76&#176;
+            {info.main?.humidity}&#176;
           </div>
         </div>
         <div className="todays-forecast">
-          <h2>Today's Forecast for Houston, TX</h2>
+          <h2>Today's Forecast for {info.name || "Loading..."}</h2>
           <div className="forecast-container">
             <ul>
               <li>Morning</li>
@@ -134,13 +134,18 @@ function Body(props) {
           </LoadScript>
         </div>
         <div className="a1-container">
-          <h2>Weather Today in Houston, TX</h2>
+          <h2>Weather Today in {info.name || "Loading..."}</h2>
           <div className="row-container">
             <div className="inline-span">
-              <span className="degree-span">92&#176;</span>
+              <span className="degree-span">
+                {(info.main &&
+                  parseInt((info.main["feels_like"] * 9) / 5 + 32)) ||
+                  "Loading..."}
+                &#176;
+              </span>
               <p className="feels-like">Feels Like</p>
             </div>
-            <img src="https://lh3.googleusercontent.com/proxy/acF9zeHbU5qMtdQy5ftSIrcd4lNbzBpYedj_DAVb8860THb6OLSFKibuAhD3bJ5DorlRulY1S_i0d-SzPc76m0TwpETvnARCCN9l" />
+            <img src="https://lh3.googleusercontent.com/proxy/pUx6WkK0ykcUcpqUTPl43RNUq4M6WvZ4R0Y66BFb-7inu_nT7Q3sxcML3hey3R3L4UgT2dXrclrpFmkEmLjvsNreeON0jeNFMLck" />
           </div>
           <div className="weather-details">
             <div className="w-details-container">
@@ -157,7 +162,9 @@ function Body(props) {
                 <div className="inline-block-detail">
                   <i class="fa fa-tint icons-details" aria-hidden="true"></i>
                   <span>Humidity</span>
-                  <span className="weather-info">80%</span>
+                  <span className="weather-info">
+                    {(info.main && info.main.humidity) || ""}%
+                  </span>
                 </div>
 
                 <div className="inline-block-detail">
@@ -166,13 +173,15 @@ function Body(props) {
                     aria-hidden="true"
                   ></i>
                   <span>Pressure</span>
-                  <span className="weather-info">29.96 in</span>
+                  <span className="weather-info">
+                    {info.main?.pressure || ""}
+                  </span>
                 </div>
 
                 <div className="inline-block-detail">
                   <i class="fa fa-eye icons-details" aria-hidden="true"></i>
                   <span>Visibility</span>
-                  <span className="weather-info">10 mi</span>
+                  <span className="weather-info">{info.visibility || ""}</span>
                 </div>
               </div>
 
@@ -180,7 +189,9 @@ function Body(props) {
                 <div className="inline-block-detail">
                   <i class="fa fa-plane icons-details" aria-hidden="true"></i>
                   <span>Wind</span>
-                  <span className="weather-info">26 mph</span>
+                  <span className="weather-info">
+                    {info.wind?.speed || ""} mph
+                  </span>
                 </div>
 
                 <div className="inline-block-detail">
