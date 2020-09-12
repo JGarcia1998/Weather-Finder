@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { connect } from "react-redux";
 
 function Body(props) {
   const [location, setLocation] = useState({});
@@ -17,9 +18,11 @@ function Body(props) {
 
   useEffect(() => {
     getGeo();
+
     if (location.lat === undefined || location.long === undefined) {
       return;
     }
+
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.long}&units=metric&appid=4ff7a9eb54cbfc41fbee3f16492a9bc0`
     )
@@ -27,12 +30,16 @@ function Body(props) {
         return response.json();
       })
       .then((result) => {
-        setInfo(result);
+        if (props.searchedCity === null) {
+          setInfo(result);
+        } else {
+          setInfo(props.searchedCity);
+        }
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [location.lat, location.long, setInfo]);
+  }, [location.lat, location.long, setInfo, props.searchedCity]);
 
   const mapStyles = {
     height: "50vh",
@@ -51,7 +58,7 @@ function Body(props) {
         <div className="city-weather">
           <div className="info-container">
             <h2>{info.name || "Loading..."} Weather</h2>
-            <p>as of 10:31 pm CDT</p>
+            <p>as of 12:00 pm CDT</p>
             <h1>
               {parseInt((info.main?.temp * 9) / 5 + 32) || "Loading..."}&#176;
             </h1>
@@ -63,7 +70,7 @@ function Body(props) {
 
           <div className="cloud-degree">
             <i class="fa fa-cloud" aria-hidden="true"></i>
-            {info.main?.humidity}&#176;
+            --/{info.main?.humidity}&#176;
           </div>
         </div>
         <div className="todays-forecast">
@@ -233,4 +240,10 @@ function Body(props) {
   );
 }
 
-export default Body;
+const mapStateToProps = (state) => {
+  return {
+    searchedCity: state.searchedCity,
+  };
+};
+
+export default connect(mapStateToProps, null)(Body);

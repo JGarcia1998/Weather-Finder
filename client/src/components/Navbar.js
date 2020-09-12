@@ -1,9 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
-function Navbar() {
+import { connect } from "react-redux";
+function Navbar(props) {
   const [Class, setClass] = useState("fa fa-bars");
   const [showMenu, setShowMenu] = useState(false);
+  const [city, setCity] = useState("");
+
   // "fa fa-times" "fa fa-bars"
   const changeClass = () => {
     if (Class == "fa fa-bars") {
@@ -14,14 +16,19 @@ function Navbar() {
       setShowMenu(false);
     }
   };
+  const handleOnChange = (e) => {
+    setCity(e.target.value);
+  };
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     alert(
-  //       "This is a front end representation ONLY, all information is FALSE"
-  //     );
-  //   }, 2000);
-  // }, []);
+  const handleOnClick = () => {
+    fetch(
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=4ff7a9eb54cbfc41fbee3f16492a9bc0`
+    )
+      .then((result) => result.json())
+      .then((res) => {
+        props.onSetSearch(res);
+      });
+  };
 
   return (
     <>
@@ -29,8 +36,12 @@ function Navbar() {
         <img className="react-logo" src="logo192.png" />
 
         <div className="navbar-children">
-          <input type="text" placeholder="Search City or Zip Code" />
-          <button className="navbar-btn">
+          <input
+            onChange={handleOnChange}
+            type="text"
+            placeholder="Search City or Zip Code"
+          />
+          <button onClick={handleOnClick} className="navbar-btn">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </div>
@@ -54,6 +65,7 @@ function Navbar() {
         <span>Video</span>
         <span>More Forecasts</span>
       </div>
+
       {showMenu ? (
         <div className="navbar-opening">
           <ul className="listing-container">
@@ -119,4 +131,10 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSetSearch: (arg) => dispatch({ type: "SETSEARCH", value: arg }),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Navbar);
