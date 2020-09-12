@@ -3,7 +3,36 @@ import { useEffect, useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 function Body(props) {
-  const [userLocation, setUserLocation] = useState({});
+  const [location, setLocation] = useState({});
+  const [info, setInfo] = useState({});
+
+  function getGeo() {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      setLocation({
+        lat: position.coords.latitude,
+        long: position.coords.longitude,
+      });
+    });
+  }
+
+  useEffect(() => {
+    getGeo();
+    if (location.lat === undefined || location.long === undefined) {
+      return;
+    }
+    fetch(
+      `http://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.long}&units=metric&appid=4ff7a9eb54cbfc41fbee3f16492a9bc0`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((result) => {
+        setInfo(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [location.lat, location.long, setInfo]);
 
   const mapStyles = {
     height: "50vh",
@@ -15,30 +44,20 @@ function Body(props) {
     lng: -96.325851,
   };
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      fetch(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=4ff7a9eb54cbfc41fbee3f16492a9bc0`
-      )
-        .then((response) => {
-          return response.json();
-        })
-        .then((result) => {
-          setUserLocation(result);
-        });
-    });
-  }, [setUserLocation]);
-
   return (
     <>
       <img className="adv" src="image1.png" />
       <div className="grid-block-container">
         <div className="city-weather">
           <div className="info-container">
-            <h2>{userLocation.name} Weather</h2>
+            <h2>{info.name || "Loading..."} Weather</h2>
             <p>as of 10:31 pm CDT</p>
-            <h1>83&#176;</h1>
-            <h2>Party Cloudy</h2>
+            <h1>
+              {parseInt((info.main?.temp * 9) / 5 + 32) || "Loading..."}&#176;
+            </h1>
+            <h2>
+              {(info.weather && info.weather[0].description) || "Loading..."}
+            </h2>
             <h3>10% chance of rain through 11pm</h3>
           </div>
 
