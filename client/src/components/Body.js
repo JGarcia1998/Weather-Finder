@@ -1,7 +1,10 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 function Body(props) {
+  const [userLocation, setUserLocation] = useState({});
+
   const mapStyles = {
     height: "50vh",
     width: "100%",
@@ -12,13 +15,27 @@ function Body(props) {
     lng: -96.325851,
   };
 
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      fetch(
+        `http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=4ff7a9eb54cbfc41fbee3f16492a9bc0`
+      )
+        .then((response) => {
+          return response.json();
+        })
+        .then((result) => {
+          setUserLocation(result);
+        });
+    });
+  }, [setUserLocation]);
+
   return (
     <>
       <img className="adv" src="image1.png" />
       <div className="grid-block-container">
         <div className="city-weather">
           <div className="info-container">
-            <h2>Houston, TX Weather</h2>
+            <h2>{userLocation.name} Weather</h2>
             <p>as of 10:31 pm CDT</p>
             <h1>83&#176;</h1>
             <h2>Party Cloudy</h2>
@@ -85,7 +102,7 @@ function Body(props) {
           </div>
           <button>More Details</button>
         </div>
-        ; ;
+
         <div className="radar-map-container">
           <h1>Radar</h1>
           <LoadScript googleMapsApiKey="AIzaSyC4sXFApb5UYtwwfG-FGcrqUAzWGJJEdAk">
