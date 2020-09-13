@@ -30,8 +30,9 @@ function Body(props) {
         return response.json();
       })
       .then((result) => {
-        if (props.searchedCity === null) {
-          setInfo(result);
+        if (props.searchedCity == null) {
+          //graph.facebook.com/v2.11/act_<AD_ACCOUNT_ID>/adimages
+          https: setInfo(result);
         } else {
           setInfo(props.searchedCity);
         }

@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import GooglePlacesAutocomplete from "react-google-places-autocomplete";
+
 function Navbar(props) {
   const [Class, setClass] = useState("fa fa-bars");
   const [showMenu, setShowMenu] = useState(false);
