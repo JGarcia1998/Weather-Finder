@@ -30,6 +30,7 @@ function Navbar(props) {
       .then((res) => {
         if (res.cod === "404") {
           alert("City not found please try again.");
+          document.getElementById("city-search").value = "";
           return;
         } else {
           props.onSetSearch(res);
@@ -47,6 +48,7 @@ function Navbar(props) {
 
         <div className="navbar-children">
           <input
+            id="city-search"
             onChange={handleOnChange}
             type="text"
             placeholder="Search City or Zip Code"
