@@ -1,10 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import PlacesAutoComplete, {
-  geocodeByAddress,
-  getLatLng,
-} from "react-places-autocomplete";
 
 function Navbar(props) {
   const [Class, setClass] = useState("fa fa-bars");
