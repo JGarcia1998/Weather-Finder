@@ -153,7 +153,7 @@ function Body(props) {
               </span>
               <p className="feels-like">Feels Like</p>
             </div>
-            <img src="https://lh3.googleusercontent.com/proxy/pUx6WkK0ykcUcpqUTPl43RNUq4M6WvZ4R0Y66BFb-7inu_nT7Q3sxcML3hey3R3L4UgT2dXrclrpFmkEmLjvsNreeON0jeNFMLck" />
+            <img src="earth.jpg" />
           </div>
           <div className="weather-details">
             <div className="w-details-container">

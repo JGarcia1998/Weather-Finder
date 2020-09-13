@@ -28,7 +28,15 @@ function Navbar(props) {
     )
       .then((result) => result.json())
       .then((res) => {
-        props.onSetSearch(res);
+        if (res.cod === "404") {
+          alert("City not found please try again.");
+          return;
+        } else {
+          props.onSetSearch(res);
+        }
+      })
+      .catch((err) => {
+        return err;
       });
   };
 
