@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 function Body(props) {
   const [location, setLocation] = useState({});
   const [info, setInfo] = useState({});
+  const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY;
 
   function getGeo() {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -24,15 +25,14 @@ function Body(props) {
     }
 
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.long}&units=metric&appid=4ff7a9eb54cbfc41fbee3f16492a9bc0`
+      `http://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.long}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
     )
       .then((response) => {
         return response.json();
       })
       .then((result) => {
         if (props.searchedCity == null) {
-          //graph.facebook.com/v2.11/act_<AD_ACCOUNT_ID>/adimages
-          https: setInfo(result);
+          setInfo(result);
         } else {
           setInfo(props.searchedCity);
         }
@@ -132,7 +132,7 @@ function Body(props) {
 
         <div className="radar-map-container">
           <h1>Radar</h1>
-          <LoadScript googleMapsApiKey="AIzaSyC4sXFApb5UYtwwfG-FGcrqUAzWGJJEdAk">
+          <LoadScript googleMapsApiKey={GOOGLE_KEY}>
             <GoogleMap
               className="google-map"
               mapContainerStyle={mapStyles}

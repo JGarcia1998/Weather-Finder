@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 function Navbar(props) {
   const [Class, setClass] = useState("fa fa-bars");
@@ -23,7 +24,7 @@ function Navbar(props) {
 
   const handleOnClick = () => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=4ff7a9eb54cbfc41fbee3f16492a9bc0`
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
     )
       .then((result) => result.json())
       .then((res) => {
