@@ -582,7 +582,7 @@ input:focus {
   border-radius: 6px;
 }
 
-@media only screen and (max-width: 878px) {
+@media only screen and (max-width: 800px) {
   .globe-container {
     display: none;
   }
@@ -591,8 +591,23 @@ input:focus {
     width: 95%;
   }
 
+  .footer-container {
+    width: 100%;
+  }
+
   .todays-forecast {
-    width: 80%;
+    width: 85%;
+
+    padding-left: 0;
+  }
+
+  .next-hours {
+    align-self: flex-start;
+    margin-left: 15px;
+  }
+
+  .todays-forecast {
+    align-items: center;
   }
 
   .react-logo {
@@ -601,7 +616,7 @@ input:focus {
   }
 
   .radar-map-container {
-    width: 90%;
+    width: 85%;
   }
 
   input {
@@ -621,7 +636,10 @@ input:focus {
   }
 
   .navbar-container-b span {
-    font-size: small;
+    font-size: x-small;
+  }
+  .second-f-container {
+    font-size: x-small;
   }
 
   .adv {
@@ -638,7 +656,7 @@ input:focus {
   }
 
   .second-col-container {
-    width: 90%;
+    width: 85%;
     padding-bottom: 10px;
   }
 
@@ -647,11 +665,25 @@ input:focus {
   }
 
   .advertisements {
-    width: 90%;
-    padding-bottom: 10px;
+    display: none;
   }
 
   .top-stories-container {
     width: 80%;
+  }
+
+  .forecast-container {
+    justify-content: none;
+    font-size: large;
+  }
+
+  .forecast-container ul {
+    padding: 10px;
+    font-size: small;
+    margin: 0;
+  }
+
+  .w-details-container {
+    flex-direction: column;
   }
 }
