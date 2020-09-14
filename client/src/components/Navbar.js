@@ -23,7 +23,7 @@ function Navbar(props) {
 
   const handleOnClick = () => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
     )
       .then((result) => result.json())
       .then((res) => {

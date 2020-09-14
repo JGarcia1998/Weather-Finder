@@ -25,7 +25,7 @@ function Body(props) {
     }
 
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.long}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.long}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
     )
       .then((response) => {
         return response.json();
