@@ -6,6 +6,7 @@ body {
   );
   background-repeat: no-repeat;
   height: 100%;
+  width: 100%;
 
   background-attachment: fixed;
 }
@@ -587,6 +588,11 @@ input:focus {
     display: none;
   }
 
+  .navbar-container {
+    width: 100%;
+    background-color: rgb(15, 31, 73);
+  }
+
   .ad6-bottom-container {
     width: 95%;
   }
@@ -595,9 +601,17 @@ input:focus {
     width: 100%;
   }
 
-  .todays-forecast {
-    width: 85%;
+  .vl {
+    border-left: 1px solid grey;
+  }
 
+  .footer-container span {
+    margin: 5px;
+  }
+
+  .todays-forecast {
+    width: 90%;
+    align-items: center;
     padding-left: 0;
   }
 
@@ -606,13 +620,15 @@ input:focus {
     margin-left: 15px;
   }
 
-  .todays-forecast {
-    align-items: center;
-  }
-
   .react-logo {
     height: 70px;
     width: 70px;
+  }
+
+  .navbar-container-b {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
   }
 
   .radar-map-container {
@@ -635,9 +651,6 @@ input:focus {
     flex-direction: column;
   }
 
-  .navbar-container-b span {
-    font-size: x-small;
-  }
   .second-f-container {
     font-size: x-small;
   }
@@ -650,18 +663,17 @@ input:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     grid-template-areas: none;
   }
 
   .second-col-container {
-    width: 85%;
+    width: 90%;
     padding-bottom: 10px;
   }
 
   .a1-container {
-    width: 90%;
+    width: 85%;
   }
 
   .advertisements {

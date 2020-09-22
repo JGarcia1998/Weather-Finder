@@ -50,7 +50,7 @@ function Navbar(props) {
             id="city-search"
             onChange={handleOnChange}
             type="text"
-            placeholder="Search City or Zip Code"
+            placeholder="Search by City"
           />
           <button onClick={handleOnClick} className="navbar-btn">
             <i class="fa fa-search" aria-hidden="true"></i>

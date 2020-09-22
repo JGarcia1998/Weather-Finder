@@ -8,24 +8,21 @@ function Body(props) {
   const [info, setInfo] = useState({});
   const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY;
 
-  function getGeo() {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setLocation({
-        lat: position.coords.latitude,
-        long: position.coords.longitude,
+  function getCity() {
+    fetch(
+      "https://api.ipdata.co?api-key=1c97ba54c9ea241a2607de114b807f47c01652b880c08c0651fd768e"
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        setLocation({ city: result.city });
       });
-    });
   }
 
   useEffect(() => {
-    getGeo();
-
-    if (location.lat === undefined || location.long === undefined) {
-      return;
-    }
-
+    getCity();
+    console.log(location.city);
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.long}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${location.city}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
     )
       .then((response) => {
         return response.json();
@@ -40,7 +37,7 @@ function Body(props) {
       .catch((err) => {
         console.log(err);
       });
-  }, [location.lat, location.long, setInfo, props.searchedCity]);
+  }, [location.city, setInfo, props.searchedCity]);
 
   const mapStyles = {
     height: "50vh",
