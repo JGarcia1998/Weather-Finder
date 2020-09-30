@@ -1,6 +1,6 @@
 # Weather-Finder
 
-- https://festive-turing-353ec4.netlify.app/
+- https://practical-swartz-f97bf9.netlify.app/
 
 Weather Finder is a Single Page Front End clone of the popular Weather.com application. Entirely built in React & CSS only. Upon loading the website, users location and city is fetched and rendered on to the website, providing up to date weather information closest to that person. Users can also search cities for weather they may be interested in and content will be updated accordingly.
 
