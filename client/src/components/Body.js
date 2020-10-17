@@ -20,7 +20,7 @@ function Body(props) {
 
   useEffect(() => {
     getCity();
-    console.log(location.city);
+
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${location.city}&units=metric&appid=${process.env.REACT_APP_WEATHER_KEY}`
     )

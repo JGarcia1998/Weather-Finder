@@ -621,8 +621,8 @@ input:focus {
   }
 
   .react-logo {
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
   }
 
   .navbar-container-b {
@@ -653,6 +653,7 @@ input:focus {
 
   .second-f-container {
     font-size: x-small;
+    display: flex;
   }
 
   .adv {
@@ -693,6 +694,11 @@ input:focus {
     padding: 10px;
     font-size: small;
     margin: 0;
+  }
+
+  .third-container {
+    font-size: x-small;
+    display: flex;
   }
 
   .w-details-container {
